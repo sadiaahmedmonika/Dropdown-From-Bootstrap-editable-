@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Demo Drop Down Responsive Menu with CSS/jQuery</title>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/responsive.css"/>
+	</head>
+	<body>
+		<div id="menu">
+			<div class="container">
+				<nav class="navbar navbar-default">
+				  <div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+						<div class="logo">
+							<a class="navbar-brand" href="#"><img src="images/logo.png"/></a>
+						</div>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+							<li><a href="#">Team</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">pages<i class="fa fa-caret-down"></i></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Another action</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Second<i class="fa fa-caret-right"></i></a>
+										<ul class="second-dropdown-menu">
+											<li><a href="#">Action</a></li>
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Second<i class="fa fa-caret-right"></i></a>
+												<ul class="third-dropdown-menu">
+													<li><a href="#">Action</a></li>
+													<li><a href="#">Another action</a></li>
+													<li><a href="#">Something else</a></li>
+													<li><a href="#">Separated link</a></li>
+												</ul>
+											</li>
+											<li><a href="#">service</a></li>
+											<li><a href="#">portfolio</a></li>
+										</ul>
+									</li>
+									<li><a href="#">about</a></li>
+								</ul>
+							</li>
+							<li><a href="#">others</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tutorial<i class="fa fa-caret-down"></i></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Another action</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Second<i class="fa fa-caret-right"></i></a>
+										<ul class="second-dropdown-menu">
+											<li><a href="#">Action</a></li>
+											<li><a href="#">Another action</a></li>
+											<li><a href="#">Something else</a></li>
+											<li><a href="#">Separated link</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Separated link</a></li>
+								</ul>
+							</li>
+							<li><a href="#">service</a></li>
+							<li><a href="#">contact</a></li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+				  </div><!-- /.container-fluid -->
+				</nav>
+			</div>
+		</div>
+		
+		<div id="second"></div>
+		
+		<script src="js/main.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script>  
+			$(function(){
+				$('.nav li').hover(function () {
+					$('.dropdown-menu', this).slideDown(250);
+				}, 
+				function () {
+					$('.dropdown-menu', this).slideUp(250);			
+				});
+			});
+			$(function(){
+				$('.dropdown-menu li').hover(function () {
+					$('.second-dropdown-menu', this).slideDown(250);
+				}, 
+				function () {
+					$('.second-dropdown-menu', this).slideUp(250);			
+				});
+			});
+			$(function(){
+				$('.second-dropdown-menu li').hover(function () {
+					$('.third-dropdown-menu', this).slideDown(250);
+				}, 
+				function () {
+					$('.third-dropdown-menu', this).slideUp(250);			
+				});
+			});
+		</script>
+	</body>
+</html>

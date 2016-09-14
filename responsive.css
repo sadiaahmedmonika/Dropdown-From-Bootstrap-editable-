@@ -1,0 +1,22 @@
+@media screen and (max-width:1024px){
+	.navbar-right {
+		width:80%;
+	}
+}
+@media screen and (max-width:768px){
+	.navbar-right {
+		width:100%;
+	}
+{
+@media screen and (max-width:640px){
+	.dropdown-menu,
+	.second-dropdown-menu li{
+		width: 160px;
+	}
+}
+
+@media screen and(max-width:480px){
+	.dropdown .second-dropdown-menu{
+		ar parchi na, ekhane ese ami norib :( 
+	}
+}
